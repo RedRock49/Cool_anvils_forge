@@ -1,0 +1,10 @@
+{
+  "block.coolanvils.mythril_block": "Мифриловый блок",
+  "item.coolanvils.mythril_ingot":"Мифриловый слиток",
+  "item.coolanvils.mythril_raw":"Рудный мифрил",
+  "block.coolanvils.mythril_ore_block":"Мифриловая руда",
+  "block.coolanvils.mythril_ore_deepslate":"Глубинная мифриловая руда",
+  "block.coolanvils.mythril_ore_raw_block": "Блок необработанного мифрила",
+  "block.coolanvils.mythril_anvil": "Мифриловая наковальня",
+  "itemGroup.coolAnvils": "Cool Anvils!"
+}

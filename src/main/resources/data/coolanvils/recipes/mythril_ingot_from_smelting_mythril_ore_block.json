@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "ingredient": {
+    "item": "coolanvils:mythril_ore_block"
+  },
+  "result": "coolanvils:mythril_ingot"
+}

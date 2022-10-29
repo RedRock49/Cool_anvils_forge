@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "coolanvils:mythril_raw"
+    }
+  },
+  "pattern":[
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "coolanvils:mythril_ore_raw_block"
+  }
+}

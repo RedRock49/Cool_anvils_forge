@@ -1,0 +1,5 @@
+{
+  "type": "coolanvils:ores",
+  "biomes": "#minecraft:is_overworld",
+  "feature": "coolanvils:mythril_ore_placed"
+}

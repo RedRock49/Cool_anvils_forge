@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "coolanvils:mythril_ingot"
+    }
+  },
+  "pattern":[
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "coolanvils:mythril_block"
+  }
+}
