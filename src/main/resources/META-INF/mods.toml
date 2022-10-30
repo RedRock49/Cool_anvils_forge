@@ -27,7 +27,7 @@ displayName="Cool Anvils" #mandatory
 # A URL for the "homepage" for this mod, displayed in the mod UI
 #displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
 # A file name (in the root of the mod JAR) containing a logo for display
-logoFile="examplemod.png" #optional //TODO create logo file
+logoFile="mythril_logo.png" #optional //TODO make better logo file
 # A text field displayed in the mod UI
 authors="RedRock49, Mr.Krinkle, PlatinumWood" #optional
 # Display Test controls the display for your mod in the server connection screen
