@@ -43,7 +43,7 @@ public class CoolAnvils
         ModMenuTypes.registerMenuTypes();
     }
 
-    private void clientSetup(final FMLCommonSetupEvent event){
+    private void clientSetup(final FMLClientSetupEvent event){
         MenuScreens.register(ModMenuTypes.MYTHRIL_ANVIL_MENU.get(), MythrilAnvilScreen::new);
     }
     private void commonSetup(final FMLCommonSetupEvent event)
