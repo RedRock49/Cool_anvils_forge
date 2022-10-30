@@ -43,6 +43,6 @@ public class ModBlocks {
     public static final RegistryObject<Item> MYTHRIL_ORE_RAW_BLOCK_ITEM = ITEMS.register("mythril_ore_raw_block",() -> new BlockItem(MYTHRIL_ORE_RAW_BLOCK.get(), new Item.Properties().tab(CoolAnvils.TAB_COOLANVILS)));
 
     //Entity Blocks
-    public static final RegistryObject<Block> MYTHRIL_ANVIL = BLOCKS.register("mythril_anvil", () -> new MythrilAnvilBlock(BlockBehaviour.Properties.of(Material.METAL).strength(5f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> MYTHRIL_ANVIL = BLOCKS.register("mythril_anvil", () -> new MythrilAnvilBlock(BlockBehaviour.Properties.of(Material.METAL).strength(9f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Item> MYTHRIL_ANVIL_ITEM = ITEMS.register("mythril_anvil", () -> new BlockItem(MYTHRIL_ANVIL.get(),new Item.Properties().tab(CoolAnvils.TAB_COOLANVILS)));
 }
