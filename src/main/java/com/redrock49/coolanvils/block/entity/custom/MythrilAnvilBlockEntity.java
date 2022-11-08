@@ -1,5 +1,6 @@
 package com.redrock49.coolanvils.block.entity.custom;
 
+import com.mojang.logging.LogUtils;
 import com.redrock49.coolanvils.block.entity.ModBlockEntities;
 import com.redrock49.coolanvils.screen.MythrilAnvilMenu;
 import net.minecraft.core.BlockPos;
@@ -29,6 +30,7 @@ import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import org.slf4j.Logger;
 
 import javax.annotation.Nonnull;
 import java.util.Map;
@@ -36,6 +38,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class MythrilAnvilBlockEntity extends BlockEntity implements MenuProvider {
+    public static final Logger LOGGER = LogUtils.getLogger();
     private final ItemStackHandler itemHandler = new ItemStackHandler(3) {
         @Override
         protected void onContentsChanged(int slot) {
@@ -105,10 +108,12 @@ public class MythrilAnvilBlockEntity extends BlockEntity implements MenuProvider
         Map<Enchantment, Integer> map1 = EnchantmentHelper.getEnchantments(entity.itemHandler.getStackInSlot(0).copy());
         Map<Enchantment, Integer> map2 = EnchantmentHelper.getEnchantments(entity.itemHandler.getStackInSlot(1).copy());
 
-        Map<Enchantment, Integer> map3 = Stream.of(map1, map2).flatMap(map -> map.entrySet().stream()).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue)); //map merging using stream
-
-        EnchantmentHelper.setEnchantments(map3, entity.itemHandler.getStackInSlot(2));
-
+        try{
+            Map<Enchantment, Integer> map3 = Stream.of(map1, map2).flatMap(map -> map.entrySet().stream()).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue)); //map merging using stream
+            EnchantmentHelper.setEnchantments(map3, entity.itemHandler.getStackInSlot(2));
+        }catch (Exception exception) {
+            LOGGER.error(exception.getLocalizedMessage());
+        }
         entity.level.playLocalSound(entity.worldPosition.getX(), entity.worldPosition.getY(), entity.worldPosition.getZ(), SoundEvents.ANVIL_USE, SoundSource.BLOCKS, 1.0F, 1.0F,false);
         entity.itemHandler.setStackInSlot(0,new ItemStack(Items.AIR));
         entity.itemHandler.setStackInSlot(1,new ItemStack(Items.AIR));
